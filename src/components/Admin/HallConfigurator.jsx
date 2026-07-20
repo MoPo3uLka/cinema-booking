@@ -9,7 +9,6 @@ function HallConfigurator() {
   const [config, setConfig] = useState([]);
   const [isSaving, setIsSaving] = useState(false);
 
-  // Генерация дефолтной схемы, если конфигурация зала пуста
   const generateDefaultConfig = useCallback((hall) => {
     const defRows = hall.hall_rows || 5;
     const defPlaces = hall.hall_places || 8;
@@ -24,7 +23,6 @@ function HallConfigurator() {
     return newConfig;
   }, []);
 
-  // Единственный эффект: при выборе зала или обновлении списка залов (после сохранения)
   useEffect(() => {
     if (!selectedHallId) {
       setRows(5);

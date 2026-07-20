@@ -27,12 +27,10 @@ export function DataProvider({ children }) {
     refreshData();
   }, [refreshData]);
 
-  // Адаптеры для клиента
   const hallConfig = async (seanceId, date) => api.getHallConfig(seanceId, date);
   const purchaseTicket = async (seanceId, ticketDate, tickets) =>
     api.buyTicket(seanceId, ticketDate, tickets);
 
-  // Админские методы
   const doLogin = async (login, password) => {
     await api.login(login, password);
     setIsLoggedIn(true);

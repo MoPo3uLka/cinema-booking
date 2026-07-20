@@ -110,27 +110,22 @@ function SessionsGrid() {
                   const film = films.find(f => f.id === seance.seance_filmid);
                   if (!film) return null;
 
-                  // Время начала в минутах от полуночи
                   const [startH, startM] = seance.seance_time.split(':').map(Number);
                   const startMinutes = startH * 60 + startM;
                   const duration = film.film_duration;
                   const endMinutes = startMinutes + duration;
 
-                  // Шкала 24 часа (0–24), но видимая область 0–100%
                   const totalMinutes = 24 * 60;
                   let leftPercent = (startMinutes / totalMinutes) * 100;
                   let widthPercent = (duration / totalMinutes) * 100;
 
-                  // Ограничиваем выход за правый край (100%)
                   if (leftPercent + widthPercent > 100) {
                     widthPercent = 100 - leftPercent;
                   }
-                  // Ограничиваем выход за левый край
                   if (leftPercent < 0) {
                     widthPercent += leftPercent;
                     leftPercent = 0;
                   }
-                  // Минимальная ширина, чтобы было видно хотя бы начало
                   if (widthPercent < 0.5) widthPercent = 0.5;
 
                   return (

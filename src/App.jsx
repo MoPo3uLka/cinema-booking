@@ -10,7 +10,6 @@ function App() {
   const isLoginPage = location.pathname === '/login';
   const isAdminPage = location.pathname.startsWith('/admin');
 
-  // Показываем Header на всех страницах, кроме Login и Admin
   const showHeader = !isLoginPage && !isAdminPage;
 
   return (

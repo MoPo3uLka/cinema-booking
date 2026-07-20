@@ -13,8 +13,8 @@ function HallScheme() {
 
   const [config, setConfig] = useState([]);
   const [selectedSeats, setSelectedSeats] = useState([]);
-  const [bookingStep, setBookingStep] = useState('select'); // 'select' | 'payment'
-  const [purchasedTickets, setPurchasedTickets] = useState(null); // массив билетов после покупки
+  const [bookingStep, setBookingStep] = useState('select');
+  const [purchasedTickets, setPurchasedTickets] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -74,7 +74,6 @@ function HallScheme() {
         throw new Error('Не удалось получить билеты');
       }
       setPurchasedTickets(result);
-      // bookingStep остаётся 'payment', но Payment увидит purchasedTickets
     } catch (e) {
       alert('Ошибка при покупке билета: ' + e.message);
     }
@@ -108,7 +107,6 @@ function HallScheme() {
     );
   }
 
-  // Экран выбора мест (select)
   return (
     <div className="hall-page">
       <section className="buying">

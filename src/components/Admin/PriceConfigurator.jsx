@@ -10,7 +10,6 @@ function PriceConfigurator() {
 
   const selectedHall = halls.find(h => h.id == selectedHallId);
 
-  // При выборе зала подставляем его текущие цены
   useEffect(() => {
     if (selectedHall) {
       setStandartPrice(selectedHall.hall_price_standart);

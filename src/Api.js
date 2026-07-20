@@ -31,7 +31,6 @@ export async function buyTicket(seanceId, ticketDate, tickets) {
   return request('/ticket', { method: 'POST', body: formData });
 }
 
-// Админские запросы (требуют авторизации)
 export async function login(loginStr, password) {
   const formData = new FormData();
   formData.set('login', loginStr);

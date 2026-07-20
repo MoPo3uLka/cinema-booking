@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';  // ← Link обязателен!
+import { Link, useNavigate } from 'react-router-dom';
 import { useData } from '../../contexts/DataContext';
 
 function Login() {

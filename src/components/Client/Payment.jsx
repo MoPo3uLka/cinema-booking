@@ -10,7 +10,6 @@ function Payment({
   purchasedTickets,
   hallName,
 }) {
-  // Состояние после успешной покупки
   if (purchasedTickets && purchasedTickets.length > 0) {
     const seatsInfo = purchasedTickets
       .map(t => `Ряд ${t.ticket_row} Место ${t.ticket_place}`)
@@ -62,7 +61,6 @@ function Payment({
     );
   }
 
-  // Исходный вид до покупки
   return (
     <div className="payment">
       <div className="payment__header">
