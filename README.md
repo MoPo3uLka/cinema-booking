@@ -19,7 +19,7 @@
 3. Откройте http://localhost:5173
 
 ## Деплой
-Проект доступен на GitHub Pages: [ссылка на ваш pages]
+Проект доступен на GitHub Pages: https://mopo3ulka.github.io/cinema-booking/
 
 ## Основные возможности
 - Просмотр расписания на 6 дней
