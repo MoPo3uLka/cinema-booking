@@ -8,7 +8,7 @@ import './App.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/cinema">
+    <BrowserRouter basename="/cinema-booking">
       <DataProvider>
         <App />
       </DataProvider>

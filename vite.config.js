@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/cinema/',
+  base: '/cinema-booking/',
   server: {
     proxy: {
       '/api': {

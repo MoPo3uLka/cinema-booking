@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mopo3ulka.github.io/cinema",
+  "homepage": "https://mopo3ulka.github.io/cinema-booking",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
