@@ -17,7 +17,7 @@ function AddHallPopup({ onClose, onAdd }) {
         <header className="popup__header">
           <h2 className="popup__title">Добавление Зала</h2>
           <button className="popup__close" onClick={onClose}>
-            <img src="/IconClose.png" alt="Закрыть" />
+            <img src="public/IconClose.png" alt="Закрыть" />
           </button>
         </header>
         <form className="popup__form" onSubmit={handleSubmit}>

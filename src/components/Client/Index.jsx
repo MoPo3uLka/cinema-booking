@@ -61,32 +61,36 @@ function Index() {
                   </div>
                 </div>
 
-                {Object.entries(hallsWithSessions).map(([hallId, sessions]) => {
-                  const hall = halls.find(h => h.id == hallId);
-                  if (!hall) return null;
-                  return (
-                    <div key={hallId} className="movie-seances__hall">
-                      <h3 className="movie-seances__hall-title">{hall.hall_name}</h3>
-                      <ul className="movie-seances__list">
-                        {sessions.map(session => {
-                          const past = isTimePast(session.seance_time, selectedDate);
-                          return (
-                            <li key={session.id} className="movie-seances__item">
-                              <Link
-                                to={`/hall/${film.id}?sessionId=${session.id}&date=${selectedDate}`}
-                                className={`movie-seances__time-btn ${past ? 'disabled' : ''}`}
-                                onClick={(e) => past && e.preventDefault()}
-                                style={past ? { opacity: 0.5, pointerEvents: 'none' } : {}}
-                              >
-                                {session.seance_time}
-                              </Link>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  );
-                })}
+                {Object.entries(hallsWithSessions).length > 0 && (
+                  <div className="movie-seances">
+                    {Object.entries(hallsWithSessions).map(([hallId, sessions]) => {
+                      const hall = halls.find(h => h.id == hallId);
+                      if (!hall) return null;
+                      return (
+                        <div key={hallId} className="movie-seances__hall">
+                          <h3 className="movie-seances__hall-title">{hall.hall_name}</h3>
+                          <ul className="movie-seances__list">
+                            {sessions.map(session => {
+                              const past = isTimePast(session.seance_time, selectedDate);
+                              return (
+                                <li key={session.id} className="movie-seances__item">
+                                  <Link
+                                    to={`/hall/${film.id}?sessionId=${session.id}&date=${selectedDate}`}
+                                    className={`movie-seances__time-btn ${past ? 'disabled' : ''}`}
+                                    onClick={(e) => past && e.preventDefault()}
+                                    style={past ? { opacity: 0.5, pointerEvents: 'none' } : {}}
+                                  >
+                                    {session.seance_time}
+                                  </Link>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </section>
             );
           })

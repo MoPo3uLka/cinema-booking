@@ -275,10 +275,17 @@ body {
   margin-top: 40px;
 }
 
+.movie-seances {
+  width: 960px;
+  margin-top: -29px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .movie-seances__hall {
   width: 960px;
   margin: 0 auto;
-  margin-top: -29px;
   display: flex;
   flex-direction: column;
   gap: 7px;
