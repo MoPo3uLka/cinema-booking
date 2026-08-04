@@ -4,6 +4,7 @@ import Index from './components/Client/Index';
 import HallScheme from './components/Client/HallScheme';
 import Login from './components/Client/Login';
 import AdminDashboard from './components/Admin/AdminDashboard';
+import ProtectedRoute from './components/common/ProtectedRoute';
 
 function App() {
   const location = useLocation();
@@ -20,7 +21,14 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/hall/:movieId" element={<HallScheme />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/admin/*" element={<AdminDashboard />} />
+          <Route
+            path="/admin/*"
+            element={
+              <ProtectedRoute>
+                <AdminDashboard />
+              </ProtectedRoute>
+            } 
+          />
         </Routes>
       </main>
     </div>

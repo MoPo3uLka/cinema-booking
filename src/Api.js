@@ -4,7 +4,6 @@ const BASE_URL = import.meta.env.PROD
 
 async function request(url, options = {}) {
   const response = await fetch(`${BASE_URL}${url}`, {
-    credentials: 'include',
     mode: 'cors',
     ...options,
   });

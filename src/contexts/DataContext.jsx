@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import * as api from '../api';
+import * as api from '../Api';
 
 const DataContext = createContext();
 
@@ -31,8 +31,8 @@ export function DataProvider({ children }) {
   const purchaseTicket = async (seanceId, ticketDate, tickets) =>
     api.buyTicket(seanceId, ticketDate, tickets);
 
-  const doLogin = async (login, password) => {
-    await api.login(login, password);
+  const doLogin = async (email, password) => {
+    await api.login(email, password);
     setIsLoggedIn(true);
   };
 
@@ -84,8 +84,8 @@ export function DataProvider({ children }) {
   return (
     <DataContext.Provider value={{
       ...data,
-      loading,
       isLoggedIn,
+      Login: doLogin,
       refreshData,
       hallConfig,
       purchaseTicket,

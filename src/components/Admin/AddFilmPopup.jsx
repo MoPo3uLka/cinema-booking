@@ -30,7 +30,7 @@ function AddFilmPopup({ onClose }) {
         <header className="popup__header">
           <h2 className="popup__title">Добавление фильма</h2>
           <button className="popup__close" onClick={onClose}>
-            <img src="/images/close.png" alt="Закрыть" />
+            <img src="/IconClose.png" alt="Закрыть" />
           </button>
         </header>
         <div className="popup__form">
