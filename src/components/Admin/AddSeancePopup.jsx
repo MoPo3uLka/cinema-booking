@@ -27,9 +27,7 @@ function AddSeancePopup({ onClose, preSelectedHallId, preSelectedFilmId, onAddSe
       <div className="popup" style={{ minHeight: 380 }}>
         <header className="popup__header">
           <h2 className="popup__title">Добавление сеанса</h2>
-          <button className="popup__close" onClick={onClose}>
-            <img src="/IconClose.png" alt="Закрыть" />
-          </button>
+          <button className="popup__close" onClick={onClose}></button>
         </header>
         <div className="popup__form">
           <div className="popup__field">

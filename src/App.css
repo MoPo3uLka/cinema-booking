@@ -1218,18 +1218,13 @@ body {
 }
 
 .popup__close {
-  background: none;
+  background: url('/IconClose.png') no-repeat center;
+  background-size: contain;
   border: none;
   cursor: pointer;
   padding: 0;
   width: 22px;
   height: 22px;
-}
-
-.popup__close img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .popup__form {

@@ -29,9 +29,7 @@ function AddFilmPopup({ onClose }) {
       <div className="popup" style={{ minHeight: 484 }}>
         <header className="popup__header">
           <h2 className="popup__title">Добавление фильма</h2>
-          <button className="popup__close" onClick={onClose}>
-            <img src="/IconClose.png" alt="Закрыть" />
-          </button>
+          <button className="popup__close" onClick={onClose}></button>
         </header>
         <div className="popup__form">
           <div className="popup__field">
