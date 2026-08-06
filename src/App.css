@@ -971,6 +971,16 @@ body {
   z-index: 0;
 }
 
+.conf-step-bottom {
+  width: 100%;
+  max-width: 962px;
+  margin: 0 auto;
+  background: rgba(234, 233, 235, 0.95);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .conf-step__header {
   background: #63536C;
   padding: 35px 42px 35px 104px;
@@ -1015,11 +1025,57 @@ body {
   z-index: 1;
 }
 
+.conf-step__title-top {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.conf-step__title-top::before {
+  content: '';
+  position: absolute;
+  left: -43px;
+  top: 200%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 48px;
+  background: #BC95D6;
+  z-index: 3;
+}
+
 .conf-step__title::before {
   content: '';
   position: absolute;
   left: -43px;
   top: 200%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 170px;
+  background: #BC95D6;
+  z-index: 3;
+}
+
+.conf-step__title-bottom {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.conf-step__title-bottom::before {
+  content: '';
+  position: absolute;
+  left: -43px;
+  top: -100%;
   transform: translateY(-50%);
   width: 2px;
   height: 48px;
@@ -1261,6 +1317,7 @@ body {
 
 .conf-step__selectors {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 12px;
 }
@@ -1554,6 +1611,23 @@ body {
   margin: 0 35px 35px 35px;
 }
 
+.conf-step__seances-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.trash-zone {
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #888;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
 .conf-step__seances-hall-title {
   font-weight: 500;
   font-size: 16px;
@@ -1708,6 +1782,14 @@ body {
     font-size: 18px;
     left: 44px;
   }
+  .conf-step__title-top {
+    font-size: 18px;
+    left: 44px;
+  }
+  .conf-step__title-bottom {
+    font-size: 18px;
+    left: 44px;
+  }
   .conf-step__selector {
     height: 36px;
     padding: 0 15px;
@@ -1854,9 +1936,13 @@ body {
     font-size: 16px;
     line-height: 20px;
   }
-  .conf-step__selector {
-    width: 100%;
-    justify-content: center;
+  .conf-step__title-top {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .conf-step__title-bottom {
+    font-size: 16px;
+    line-height: 20px;
   }
   .conf-step__input {
     width: 100%;
@@ -1883,6 +1969,14 @@ body {
   }
 
   .conf-step__title::before {
+    display: none;
+  }
+
+  .conf-step__title-top::before {
+    display: none;
+  }
+
+  .conf-step__title-bottom::before {
     display: none;
   }
 }

@@ -13,9 +13,9 @@ function OpenSales() {
   };
 
   return (
-    <section className="conf-step">
+    <section className="conf-step-bottom">
       <header className="conf-step__header">
-        <h2 className="conf-step__title">Открыть продажи</h2>
+        <h2 className="conf-step__title-bottom">Открыть продажи</h2>
       </header>
       <div className="conf-step__wrapper" style={{ alignItems: 'center' }}>
         <p className="conf-step__paragraph" style={{ width: '100%', marginBottom: 15 }}>

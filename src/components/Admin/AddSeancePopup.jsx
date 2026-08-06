@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useData } from '../../contexts/DataContext';
 
-function AddSeancePopup({ onClose, onAdd, preSelectedHallId, preSelectedFilmId }) {
+function AddSeancePopup({ onClose, preSelectedHallId, preSelectedFilmId, onAddSeance }) {
   const { halls, films } = useData();
   const [hallId, setHallId] = useState(preSelectedHallId || '');
   const [filmId, setFilmId] = useState(preSelectedFilmId || '');
@@ -18,7 +18,7 @@ function AddSeancePopup({ onClose, onAdd, preSelectedHallId, preSelectedFilmId }
       alert('Введите время в формате HH:MM');
       return;
     }
-    onAdd({ hallId, filmId, time });
+    onAddSeance(hallId, filmId, time);
     onClose();
   };
 
@@ -62,7 +62,7 @@ function AddSeancePopup({ onClose, onAdd, preSelectedHallId, preSelectedFilmId }
             <label className="popup__label">Время начала</label>
             <input
               className="popup__input"
-              type="text"
+              type="time"
               placeholder="00:00"
               value={time}
               onChange={(e) => setTime(e.target.value)}

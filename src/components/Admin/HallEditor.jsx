@@ -18,7 +18,7 @@ function HallEditor() {
     <>
       <section className="conf-step">
         <header className="conf-step__header">
-          <h2 className="conf-step__title">Управление залами</h2>
+          <h2 className="conf-step__title-top">Управление залами</h2>
         </header>
         <div className="conf-step__wrapper">
           <p className="conf-step__label">Доступные залы:</p>
